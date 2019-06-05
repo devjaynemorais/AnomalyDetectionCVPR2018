@@ -19,6 +19,7 @@ from skimage import color
 from os.path import isfile, join
 import numpy as np
 import numpy
+import numpy.matlib
 from datetime import datetime
 from scipy.spatial.distance import cdist,pdist,squareform
 import theano.sandbox
@@ -31,6 +32,8 @@ import cv2
 import os, sys
 import pickle
 from PyQt4 import QtGui   # If PyQt4 is not working in your case, you can try PyQt5, 
+
+
 seed = 7
 numpy.random.seed(seed)
 
@@ -130,7 +133,7 @@ class PrettyWidget(QtGui.QWidget):
         self.setWindowTitle('Anomaly Detection')
         btn = QtGui.QPushButton('ANOMALY DETECTION SYSTEM \n Please select video', self)
 
-        Model_dir = '/home/cvlab/Waqas_Data/Anomaly_Data/Pre_TrainedModels/L1L2/'
+        Model_dir = './'
         weights_path = Model_dir + 'weights_L1L2.mat'
         model_path = Model_dir + 'model.json'
         ########################################
@@ -160,7 +163,7 @@ class PrettyWidget(QtGui.QWidget):
                                                         "/home/cvlab/Waqas_Data/Anomaly_Data/Normal_test_abn")
 
         print(video_path)
-        cap = cv2.VideoCapture(video_path)
+        cap = cv2.VideoCapture(str(video_path))
         #Total_frames = cap.get(cv2.CV_CAP_PROP_FRAME_COUNT)
         print(cv2)
         Total_frames = cap.get(cv2.CAP_PROP_FRAME_COUNT)
@@ -185,7 +188,7 @@ class PrettyWidget(QtGui.QWidget):
 
 
 
-        cap = cv2.VideoCapture((video_path))
+        cap = cv2.VideoCapture(str(video_path))
         while not cap.isOpened():
             cap = cv2.VideoCapture((video_path))
             cv2.waitKey(1000)
