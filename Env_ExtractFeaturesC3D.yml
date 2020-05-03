@@ -1,4 +1,4 @@
-name: AnomalyDetectionCVPR2018
+name: Env_ExtractFeaturesC3D
 channels:
 - defaults
 dependencies:
