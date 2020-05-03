@@ -201,4 +201,13 @@ https://unix.stackexchange.com/questions/410579/change-the-python3-default-versi
 sudo pip3.5 install -U scikit-image
 
 Ambiente Virtual:
+jayne@jayne-X555LD:~/Documentos/MESTRADO/PESQUISA/AnomalyDetectionCVPR2018$ source AnomalyDetection/bin/activate
+(AnomalyDetection) jayne@jayne-X555LD:~/Documentos/MESTRADO/PESQUISA/AnomalyDetectionCVPR2018$
+(AnomalyDetection) jayne@jayne-X555LD:~/Documentos/MESTRADO/PESQUISA/AnomalyDetectionCVPR2018$ sudo python3.5 Demo_GUI.py
+
+
+Para criar um ambiente em uma versão específica do python use:
+python3.6 -m venv MeuVirtualenv --without-pip
+
+
 http://marcospereirajr.com.br/python/2017/07/11/virtualenv-ambiente-virtuais-isolados-em-python.html
