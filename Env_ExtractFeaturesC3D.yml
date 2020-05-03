@@ -1,4 +1,4 @@
-name: experimento2_dissertacao
+name: Env_ExtractFeaturesC3D
 channels:
 - defaults
 dependencies:
@@ -32,5 +32,5 @@ dependencies:
 - xz=5.2.5=h7b6447c_0
 - zipp=3.1.0=py_0
 - zlib=1.2.11=h7b6447c_3
-prefix: /home/jayne/anaconda3/envs/experimento2_dissertacao
+prefix: /home/jayne/anaconda3/envs/Env_ExtractFeaturesC3D
 

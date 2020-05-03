@@ -20,8 +20,9 @@ Clone o repositório a seguir:
 
 
 Crie um ambiente de nome 'Env_ExtractFeaturesC3D' com base no env 'Env_ExtractFeaturesC3D.yml' exportado.
-Obs.: Verifique se já não existe um enviroment com esse mesmo nome na sua máquina.
-'conda env create -f Env_ExtractFeaturesC3D'
+Obs.: Verifique se já não existe um enviroment com esse mesmo nome na sua máquina. Caso já exista, execute `conda env remove --name Env_ExtractFeaturesC3D`
+
+`conda env create -f Env_ExtractFeaturesC3D.yml`
 
 # Mude o Back-end para o Theano
 $ cd $HOME
