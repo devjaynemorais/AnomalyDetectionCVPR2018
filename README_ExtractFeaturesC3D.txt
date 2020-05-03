@@ -1,3 +1,5 @@
+Python 3.5.5 :: Anaconda, Inc.
+-------------------
 LAB:
 
 (base) jayne@lpc:~/Documentos/FineTuning$ pwd
