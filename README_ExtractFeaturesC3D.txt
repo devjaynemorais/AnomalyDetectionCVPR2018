@@ -23,6 +23,12 @@ Crie um ambiente de nome 'Env_ExtractFeaturesC3D' com base no env 'Env_ExtractFe
 Obs.: Verifique se já não existe um enviroment com esse mesmo nome na sua máquina.
 'conda env create -f Env_ExtractFeaturesC3D'
 
+# Mude o Back-end para o Theano
+$ cd $HOME
+$ cd .keras/
+$ nano keras.json
+>> substitua 'tensorflow' por 'theano' na variável 'backend'
+
 Ative o seguinte enviroment: `source activate Env_ExtractFeaturesC3D`
 
 Execute `jupyter notebook` no terminal e abra o arquivo `ExtraindoAtivacoesModeloComNovidade-vfinal`
