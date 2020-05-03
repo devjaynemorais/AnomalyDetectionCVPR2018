@@ -1,6 +1,6 @@
-clc
-clear all
-close all
+clc % Limpa todo o texto da janela de comando
+clear all % Remove todas as funções carregadas da RAM e que recarregá-las consome muito tempo. Remove também todos os pontos de interrupção (breakpoints) do depurador
+close all % Fecha e oculta todas as figuras
  
 
 C3D_CNN_Path='/home/cvlab/Waqas_Data/Anomaly_Data/C3D_Complete_video/Testing_Videos_C3D'; % C3D features for videos
@@ -9,12 +9,12 @@ AllAnn_Path='/home/cvlab/Waqas_Data/Anomaly_Data/Temporal_Annotations'; % Path o
 Model_Score_Folder='/home/cvlab/Waqas_Data/Anomaly_Data/Model_Res';  % Path of Pretrained Model score on Testing videos (32 numbers for 32 temporal segments)
 Paper_Results='/home/cvlab/Waqas_Data/Anomaly_Data/Eval_Res';   % Path to save results.
  
-All_Videos_scores=dir(Model_Score_Folder);
-All_Videos_scores=All_Videos_scores(3:end);
-nVideos=length(All_Videos_scores);
-frm_counter=1;
-All_Detect=zeros(1,1000000);
-All_GT=zeros(1,1000000);
+All_Videos_scores=dir(Model_Score_Folder); % Exibe lista de diretórios
+All_Videos_scores=All_Videos_scores(3:end); $ ?
+nVideos=length(All_Videos_scores); % Total de ?
+frm_counter=1; % Contador de frames
+All_Detect=zeros(1,1000000); % Criando um array de 1 por 1000000 dimensões preenchido com zeros
+All_GT=zeros(1,1000000); % Criando um array de 1 por 1000000 dimensões preenchido com zeros
 
 for ivideo=1:nVideos
     ivideo
