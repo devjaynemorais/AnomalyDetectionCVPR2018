@@ -7,7 +7,7 @@ from keras.models import model_from_json
 import theano.tensor as T
 import theano
 import csv
-import ConfigParser
+import configparser
 import collections
 import time
 import csv
@@ -22,7 +22,7 @@ from datetime import datetime
 from scipy.spatial.distance import cdist,pdist,squareform
 import theano.sandbox
 import shutil
-theano.sandbox.cuda.use('gpu0')
+#theano.sandbox.cuda.use('gpu0')
 
 
 
@@ -122,7 +122,7 @@ for iv in range(nVideos):
     aa=All_Test_files[iv]
     aa=aa[0:-4]
     A_predictions_path = Results_Path + aa + '.mat'  # Save array of 1*32, containing anomaly score for each segment. Please see Evaluate Anomaly Detector to compute  ROC.
-    print "Total Time took: " + str(datetime.now() - time_before)
+    print ("Total Time took: " + str(datetime.now() - time_before))
 
 
 
